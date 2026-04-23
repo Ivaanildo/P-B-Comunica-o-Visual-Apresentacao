@@ -17,6 +17,7 @@
   --branco:#FFFFFF;
   --d:#0d1117;--d2:#161b22;--d3:#21262d;
   --border:#30363d;--muted:#8b949e;--txt:#e6edf3;
+  --g:#2bb933;
   --r:14px;
 }
 html,body{height:100%;overflow:hidden;font-family:'Inter',sans-serif;background:var(--d);color:var(--txt);}
@@ -277,7 +278,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
   <div class="s1-pills">
     <div class="pill">🚀 <strong>5×</strong> mais rápido no celular</div>
     <div class="pill">🔍 SEO <strong>100%</strong> configurado</div>
-    <div class="pill">💸 Hospedagem <strong>R$ 0/mês</strong></div>
+<!----    <div class="pill">💸 Hospedagem <strong>R$ 0/mês</strong></div> ---->
     <div class="pill">📈 <strong>+20–40%</strong> visitas orgânicas</div>
     <div class="pill">📝 <strong>4 artigos</strong> prontos para publicar</div>
     <div class="pill">🖼️ <strong>21 imagens</strong> do portfólio real</div>
@@ -286,7 +287,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
 
 <!-- ══ S2 ANTES/DEPOIS ══ -->
 <section class="slide" id="s2">
-  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">02 / 07</span></div>
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">02 / 08</span></div>
   <h2 style="margin-bottom:6px;">O que mudou</h2>
   <p class="sub" style="margin-bottom:10px;">Antes e depois — no que realmente importa para o negócio</p>
   <div class="g2" style="flex:1;">
@@ -319,7 +320,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
 
 <!-- ══ S3 VELOCIDADE ══ -->
 <section class="slide" id="s3">
-  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">03 / 07</span></div>
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">03 / 08</span></div>
   <h2 style="margin-bottom:4px;">Velocidade de carregamento</h2>
   <p class="sub" style="margin-bottom:10px;">Tempo que o conteúdo aparece no celular do cliente — Google usa isso como fator de ranqueamento</p>
   <div class="speed-layout">
@@ -346,7 +347,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
 
 
 <section class="slide" id="s4">
-  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">04 / 07</span></div>
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">04 / 08</span></div>
   <h2 style="margin-bottom:4px;">Palavras-chave estratégicas</h2>
   <p class="sub" style="margin-bottom:10px;">O que seus clientes já estão buscando no Google — o site novo cobre esses termos</p>
   <div class="kw-layout">
@@ -384,7 +385,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
 
 
 <section class="slide" id="s5">
-  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">05 / 07</span></div>
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">05 / 08</span></div>
   <h2 style="margin-bottom:4px;">Blog de conteúdo especializado</h2>
   <p class="sub" style="margin-bottom:8px;">4 artigos prontos para publicar — cada um atrai um tipo diferente de cliente no Google</p>
   <div class="blog-layout">
@@ -427,7 +428,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
   </div>
 </section>
 <section class="slide" id="s6">
-  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">06 / 07</span></div>
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">06 / 08</span></div>
   <h2 style="margin-bottom:4px;">Projeção de tráfego orgânico</h2>
   <p class="sub" style="margin-bottom:10px;">Estimativa de crescimento após migração + publicação dos artigos do blog</p>
   <div class="proj-layout">
@@ -454,7 +455,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
 
 <!-- ══ S7 CTA ══ -->
 <section class="slide" id="s7">
-  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">07 / 07</span></div>
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">07 / 08</span></div>
   <h1>O site está pronto.<br><em>O próximo passo é publicar.</em></h1>
   <p class="sub">Com o domínio apontando para o novo site, a P&B já parte à frente de mais da metade dos concorrentes que ainda reprovam nos testes do Google.</p>
   <div class="cta-row">
@@ -565,7 +566,7 @@ function lazyInit(i){
   if(init[i])return;
   init[i]=true;
 
-  /* S3 speed bar */
+  /* S3 speed bar (index 2) */
   if(i===2){
     new Chart(document.getElementById('chartSpeed'),{
       type:'bar',
@@ -582,30 +583,8 @@ function lazyInit(i){
     });
   }
 
-  /* S4 radar */
+  /* S4 keywords bar (index 3) */
   if(i===3){
-    new Chart(document.getElementById('chartRadar'),{
-      type:'radar',
-      data:{
-        labels:['Meta Tags','Open Graph','Core Vitals','SEO Local','Mobile-First','Segurança'],
-        datasets:[
-          {label:'Site Antigo',data:[0,0,18,10,40,28],backgroundColor:'rgba(239,68,68,.12)',borderColor:'rgba(239,68,68,.55)',pointBackgroundColor:'#ef4444',pointRadius:3},
-          {label:'Site Novo',data:[100,100,88,85,95,94],backgroundColor:'rgba(26,158,20,.12)',borderColor:'rgba(26,158,20,.65)',pointBackgroundColor:'#1a9e14',pointRadius:3}
-        ]
-      },
-      options:{responsive:true,maintainAspectRatio:false,animation:{duration:1000},
-        plugins:{legend:{labels:{color:'#c9d1d9',usePointStyle:true,boxWidth:10}}},
-        scales:{r:{grid:{color:'rgba(255,255,255,.06)'},ticks:{display:false},pointLabels:{color:'#8b949e',font:{size:10}},min:0,max:100}}}
-    });
-  }
-
-  /* S5 gauges */
-  if(i===4){
-    ag('g-lcp',0.82); ag('g-inp',0.90); ag('g-cls',0.97);
-  }
-
-  /* S6 keywords bar */
-  if(i===5){
     new Chart(document.getElementById('chartKw'),{
       type:'bar',
       data:{
@@ -623,8 +602,8 @@ function lazyInit(i){
     });
   }
 
-  /* S11 projection */
-  if(i===10){
+  /* S6 projection (index 5) */
+  if(i===5){
     new Chart(document.getElementById('chartProj'),{
       type:'line',
       data:{
@@ -639,15 +618,6 @@ function lazyInit(i){
         scales:{x:{grid:{color:'rgba(255,255,255,.04)'}},y:{grid:{color:'rgba(255,255,255,.04)'},ticks:{callback:v=>v+'%'},min:80}}}
     });
   }
-}
-
-function ag(id,pct){
-  const el=document.getElementById(id);
-  if(!el)return;
-  const c=2*Math.PI*46; // r=46
-  el.style.strokeDasharray=String(c);
-  el.style.strokeDashoffset=String(c);
-  setTimeout(()=>{el.style.strokeDashoffset=String(c*(1-pct));},80);
 }
 
 /* init prog bar */
