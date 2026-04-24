@@ -17,7 +17,6 @@
   --branco:#FFFFFF;
   --d:#0d1117;--d2:#161b22;--d3:#21262d;
   --border:#30363d;--muted:#8b949e;--txt:#e6edf3;
-  --g:#2bb933;
   --r:14px;
 }
 html,body{height:100%;overflow:hidden;font-family:'Inter',sans-serif;background:var(--d);color:var(--txt);}
@@ -258,6 +257,23 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
 .pricing-check{font-size:.76rem;color:var(--txt);display:flex;align-items:flex-start;gap:8px;}
 .pricing-check::before{content:'✓';color:var(--verde);font-weight:800;flex-shrink:0;}
 
+/* ── S9 TRÁFEGO PAGO ── */
+.paid-traffic-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px;flex:1;margin:20px 0;min-height:0;align-items:start;}
+.traffic-card{background:linear-gradient(135deg,rgba(39,169,33,.08) 0%,rgba(39,169,33,.04) 100%);border:1.5px solid rgba(39,169,33,.2);border-radius:var(--r);padding:20px 22px;display:flex;flex-direction:column;gap:12px;}
+.traffic-card.highlight{border-color:var(--verde);background:linear-gradient(135deg,rgba(39,169,33,.12) 0%,rgba(39,169,33,.05) 100%);}
+.traffic-header{display:flex;align-items:center;gap:10px;margin-bottom:4px;}
+.traffic-icon{font-size:1.6rem;}
+.traffic-title{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--txt);}
+.traffic-value{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:800;color:var(--verde);margin:8px 0;}
+.traffic-desc{font-size:.76rem;color:var(--muted);margin-bottom:12px;line-height:1.4;}
+.traffic-includes{display:flex;flex-direction:column;gap:8px;}
+.traffic-check{font-size:.74rem;color:var(--txt);display:flex;align-items:flex-start;gap:8px;}
+.traffic-check::before{content:'✓';color:var(--verde);font-weight:800;flex-shrink:0;}
+.traffic-commitments{display:flex;flex-direction:column;gap:10px;}
+.commitment-item{background:rgba(39,169,33,.08);border:1px solid rgba(39,169,33,.15);border-radius:10px;padding:10px 12px;display:flex;align-items:flex-start;gap:10px;}
+.commitment-badge{background:var(--verde);color:#fff;padding:3px 8px;border-radius:6px;font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;flex-shrink:0;white-space:nowrap;}
+.commitment-text{font-size:.74rem;color:var(--txt);line-height:1.35;}
+
 #hint{position:fixed;top:18px;right:20px;font-size:.65rem;color:var(--border);z-index:50;}
 </style>
 </head>
@@ -278,7 +294,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
   <div class="s1-pills">
     <div class="pill">🚀 <strong>5×</strong> mais rápido no celular</div>
     <div class="pill">🔍 SEO <strong>100%</strong> configurado</div>
-<!----    <div class="pill">💸 Hospedagem <strong>R$ 0/mês</strong></div> ---->
+    <div class="pill">💸 Hospedagem <strong>R$ 0/mês</strong></div>
     <div class="pill">📈 <strong>+20–40%</strong> visitas orgânicas</div>
     <div class="pill">📝 <strong>4 artigos</strong> prontos para publicar</div>
     <div class="pill">🖼️ <strong>21 imagens</strong> do portfólio real</div>
@@ -287,7 +303,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
 
 <!-- ══ S2 ANTES/DEPOIS ══ -->
 <section class="slide" id="s2">
-  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">02 / 08</span></div>
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">02 / 07</span></div>
   <h2 style="margin-bottom:6px;">O que mudou</h2>
   <p class="sub" style="margin-bottom:10px;">Antes e depois — no que realmente importa para o negócio</p>
   <div class="g2" style="flex:1;">
@@ -320,7 +336,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
 
 <!-- ══ S3 VELOCIDADE ══ -->
 <section class="slide" id="s3">
-  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">03 / 08</span></div>
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">03 / 07</span></div>
   <h2 style="margin-bottom:4px;">Velocidade de carregamento</h2>
   <p class="sub" style="margin-bottom:10px;">Tempo que o conteúdo aparece no celular do cliente — Google usa isso como fator de ranqueamento</p>
   <div class="speed-layout">
@@ -347,7 +363,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
 
 
 <section class="slide" id="s4">
-  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">04 / 08</span></div>
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">04 / 07</span></div>
   <h2 style="margin-bottom:4px;">Palavras-chave estratégicas</h2>
   <p class="sub" style="margin-bottom:10px;">O que seus clientes já estão buscando no Google — o site novo cobre esses termos</p>
   <div class="kw-layout">
@@ -385,7 +401,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
 
 
 <section class="slide" id="s5">
-  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">05 / 08</span></div>
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">05 / 07</span></div>
   <h2 style="margin-bottom:4px;">Blog de conteúdo especializado</h2>
   <p class="sub" style="margin-bottom:8px;">4 artigos prontos para publicar — cada um atrai um tipo diferente de cliente no Google</p>
   <div class="blog-layout">
@@ -428,7 +444,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
   </div>
 </section>
 <section class="slide" id="s6">
-  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">06 / 08</span></div>
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">06 / 07</span></div>
   <h2 style="margin-bottom:4px;">Projeção de tráfego orgânico</h2>
   <p class="sub" style="margin-bottom:10px;">Estimativa de crescimento após migração + publicação dos artigos do blog</p>
   <div class="proj-layout">
@@ -455,7 +471,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
 
 <!-- ══ S7 CTA ══ -->
 <section class="slide" id="s7">
-  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">07 / 08</span></div>
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">07 / 07</span></div>
   <h1>O site está pronto.<br><em>O próximo passo é publicar.</em></h1>
   <p class="sub">Com o domínio apontando para o novo site, a P&B já parte à frente de mais da metade dos concorrentes que ainda reprovam nos testes do Google.</p>
   <div class="cta-row">
@@ -507,6 +523,65 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
   </div>
 </section>
 
+<!-- ══ S9 TRÁFEGO PAGO ══ -->
+<section class="slide" id="s9">
+  <div class="sh"><span class="sh-brand">P&B Comunicação Visual</span><span class="sh-num">09 / 09</span></div>
+  <h1>Gestão de<br><em>Tráfego Pago.</em></h1>
+  <p class="sub">Estratégias de Google Ads, Meta Ads e LinkedIn para potencializar resultados da sua presença online.</p>
+  
+  <div class="paid-traffic-layout">
+    <div class="traffic-card">
+      <div class="traffic-header">
+        <div class="traffic-icon">📊</div>
+        <div class="traffic-title">Gestão por Plataforma</div>
+      </div>
+      <div class="traffic-value">R$ 1.699,00</div>
+      <div class="traffic-desc">Gestão completa de campanhas por plataforma (Google Ads, Meta Ads ou LinkedIn)</div>
+      <div class="traffic-includes">
+        <div class="traffic-check">✓ Análise estratégica inicial</div>
+        <div class="traffic-check">✓ Criação de campanhas otimizadas</div>
+        <div class="traffic-check">✓ Monitoramento de métricas 24/7</div>
+        <div class="traffic-check">✓ Otimização contínua de ROI</div>
+        <div class="traffic-check">✓ Relatórios quinzenais</div>
+        <div class="traffic-check">✓ Suporte técnico prioritário</div>
+      </div>
+    </div>
+    
+    <div class="traffic-card highlight">
+      <div class="traffic-header">
+        <div class="traffic-icon">🔐</div>
+        <div class="traffic-title">Segurança & Sigilo</div>
+      </div>
+      <div class="traffic-commitments">
+        <div class="commitment-item">
+          <div class="commitment-badge">NDAS</div>
+          <div class="commitment-text">Todos os dados sob Acordo de Confidencialidade assinado</div>
+        </div>
+        <div class="commitment-item">
+          <div class="commitment-badge">LGPD</div>
+          <div class="commitment-text">100% compliant com Lei Geral de Proteção de Dados</div>
+        </div>
+        <div class="commitment-item">
+          <div class="commitment-badge">SIGILO</div>
+          <div class="commitment-text">Acesso restrito a dados financeiros e operacionais</div>
+        </div>
+        <div class="commitment-item">
+          <div class="commitment-badge">CRIPTOGRAFIA</div>
+          <div class="commitment-text">Comunicações e arquivos com criptografia ponta-a-ponta</div>
+        </div>
+        <div class="commitment-item">
+          <div class="commitment-badge">AUDITORIA</div>
+          <div class="commitment-text">Auditorias internas periódicas de segurança</div>
+        </div>
+        <div class="commitment-item">
+          <div class="commitment-badge">EXCLUSIVIDADE</div>
+          <div class="commitment-text">Acesso exclusivo — dados nunca compartilhados com terceiros</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </div><!-- /deck -->
 
 <button class="arr" id="ap">←</button>
@@ -514,7 +589,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.6rem);fo
 <div id="nav">
   <button class="nbtn" id="np">←</button>
   <div class="dots" id="dots"></div>
-  <div id="counter">1 / 08</div>
+  <div id="counter">1 / 09</div>
   <button class="nbtn" id="nn">→</button>
 </div>
 
@@ -566,7 +641,7 @@ function lazyInit(i){
   if(init[i])return;
   init[i]=true;
 
-  /* S3 speed bar (index 2) */
+  /* S3 speed bar */
   if(i===2){
     new Chart(document.getElementById('chartSpeed'),{
       type:'bar',
@@ -583,8 +658,30 @@ function lazyInit(i){
     });
   }
 
-  /* S4 keywords bar (index 3) */
+  /* S4 radar */
   if(i===3){
+    new Chart(document.getElementById('chartRadar'),{
+      type:'radar',
+      data:{
+        labels:['Meta Tags','Open Graph','Core Vitals','SEO Local','Mobile-First','Segurança'],
+        datasets:[
+          {label:'Site Antigo',data:[0,0,18,10,40,28],backgroundColor:'rgba(239,68,68,.12)',borderColor:'rgba(239,68,68,.55)',pointBackgroundColor:'#ef4444',pointRadius:3},
+          {label:'Site Novo',data:[100,100,88,85,95,94],backgroundColor:'rgba(26,158,20,.12)',borderColor:'rgba(26,158,20,.65)',pointBackgroundColor:'#1a9e14',pointRadius:3}
+        ]
+      },
+      options:{responsive:true,maintainAspectRatio:false,animation:{duration:1000},
+        plugins:{legend:{labels:{color:'#c9d1d9',usePointStyle:true,boxWidth:10}}},
+        scales:{r:{grid:{color:'rgba(255,255,255,.06)'},ticks:{display:false},pointLabels:{color:'#8b949e',font:{size:10}},min:0,max:100}}}
+    });
+  }
+
+  /* S5 gauges */
+  if(i===4){
+    ag('g-lcp',0.82); ag('g-inp',0.90); ag('g-cls',0.97);
+  }
+
+  /* S6 keywords bar */
+  if(i===5){
     new Chart(document.getElementById('chartKw'),{
       type:'bar',
       data:{
@@ -602,8 +699,8 @@ function lazyInit(i){
     });
   }
 
-  /* S6 projection (index 5) */
-  if(i===5){
+  /* S11 projection */
+  if(i===10){
     new Chart(document.getElementById('chartProj'),{
       type:'line',
       data:{
@@ -618,6 +715,15 @@ function lazyInit(i){
         scales:{x:{grid:{color:'rgba(255,255,255,.04)'}},y:{grid:{color:'rgba(255,255,255,.04)'},ticks:{callback:v=>v+'%'},min:80}}}
     });
   }
+}
+
+function ag(id,pct){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const c=2*Math.PI*46; // r=46
+  el.style.strokeDasharray=String(c);
+  el.style.strokeDashoffset=String(c);
+  setTimeout(()=>{el.style.strokeDashoffset=String(c*(1-pct));},80);
 }
 
 /* init prog bar */
